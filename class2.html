@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 
 	<head>
@@ -38,7 +38,7 @@
 		<div class="slides">
         <!-- Opening slide -->
             <section>
-                <img src="images/gdi_logo_badge.png" alt="GDI logo">
+              <img src="images/bzs-academy-logo-2015.png" alt="Bizstream Academy logo">
                 <h3>JavaScript for Beginners</h3>
                 <h4>Class 2</h4>
             </section>
@@ -63,13 +63,15 @@ console.log(receipt);
 
             <section>
                 <h3>Variable Scope</h3>
-                <p>The scope of a variable is how long the computer will remember it.</p>
+                <p>The scope of a variable determines the accessibility of the variables data. </p>
+                <img src="images/scope.png" alt="Scope Image">
+
             </section>
             <section>
                 <h3>Global Scope</h3>
                 <p>A variable declared outside a function has a <span class="yellow">global</span> scope and can be accessed anywhere, even in a function.</p>
                   <pre><code>
-var awesomeGroup = 'Girl Develop It'; //Global scope
+var awesomeGroup = 'BizStream Academy'; //Global scope
 function whatIsAwesome() {
     console.log (awesomeGroup + ' is pretty awesome.'); //Will work
 }
@@ -82,7 +84,7 @@ whatIsAwesome();
                 <p>A variable declared within a function has a <span class="yellow">local</span> scope and can only be accessed within that function.</p>
                 <pre><code>
 function whatIsAwesome() {
-    var awesomeGroup = 'Girl Develop It'; //Local scope
+    var awesomeGroup = 'BizStream Academy'; //Local scope
     console.log ('I made a variable called awesomeGroup with a value of ' + awesomeGroup); //Will work
 }
 <!--on the slide, line 84 has a purple { and it's closing bracket } on line 87 is white. do they need to be the same color?-->
@@ -103,7 +105,7 @@ var dogsRule = false;
 
             <section>
                 <h3>The if statement</h3>
-                <p>Use if to decide which lines of code to execute, based on a condition.</p>
+                <p>Use an if statement to decide which lines of code to execute, based on a condition.</p>
                 <pre><code>
 if (condition) {
   // statements to execute
@@ -175,9 +177,10 @@ if (bananas &gt; 0) {
             <section>
                 <h3>Watch out!</h3>
                 <p>Don't mix up = and ==</p>
+              <img src="images/mixup.jpg" alt="Mixup Image">
             </section>
             <section>
-				<h3>Let's Develop It</h3>
+				<h3>Enough Talk: Let's Code!</h3>
                 <p>Make a variable called "temperature." Write some code that tells you to put on a coat if it is below 50 degrees.</p>
 			</section>
 
@@ -212,7 +215,7 @@ if (age &gt;= 35) {
 				</code></pre>
             </section>
              <section>
-				<h3>Let's Develop It</h3>
+				<h3>Enough Talk: Let's Code!</h3>
                 <p>Modify your "wear a coat" code for these conditions:</p>
                 <ol>
                     <li>If it is less than 50 degrees, wear a coat.</li>
@@ -263,8 +266,10 @@ if (bananas &gt;=2 &amp;&amp; bananas &lt;7) {
 				</code></pre>
             </section>
             <section>
-				<h3>Let's Develop It</h3>
+				<h3>Enough Talk: Let's Code!</h3>
                 <p>Add a logical operator to your what to wear program.</p>
+              <img src="images/true-false.jpg" alt="True False Image">
+
 			</section>
 
             <section>
@@ -281,6 +286,8 @@ while (bottlesOfBeer &gt;= 1) {
             <section>
 				<h3>Infinite Loops</h3>
                 <p>Make sure something changes in the loop, or your loop will go on forever...</p>
+              <img src="images/infinity.jpg" alt="Infinite Image">
+
 			</section>
             <section>
                 <h3>For loops</h3>
@@ -326,7 +333,7 @@ for (var i = 100; i &lt;= 200; i++) {
 				</code></pre>
             </section>
             <section>
-				<h3>Let's Develop It</h3>
+				<h3>Enough Talk: Let's Code!</h3>
                 <p>Write a loop that gives you the 9's times table,<br /> from 9 x 1 = 9 to 9 x 12 = 108.</p>
                 <p>Finish early? Try using a loop inside a loop to write all the times tables, from 1 to 12.</p>
 			</section>
@@ -342,7 +349,7 @@ var arrayName = [element0, element1, ...];
 var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green',
 'Blue', 'Indigo', 'Violet'];
 var lotteryNumbers = [33, 72, 64, 18, 17, 85];
-var myFavoriteThings = ['Broccoli', 1024, 'Sherlock'];
+var myFavoriteThings = ['Watermelon', 1024, 'Sherlock'];
 				</code></pre>
             </section>
             <section>
@@ -368,7 +375,7 @@ var lastColor = rainbowColors[6];
                 <h3>Changing arrays</h3>
                 <p>You can use bracket notation to change an item in an array</p>
                 <pre><code>
-var myFavoriteThings = ['Broccoli', 1024, 'Sherlock'];
+var myFavoriteThings = ['Watermelon', 1024, 'Sherlock'];
 myFavoriteThings[0] = 'Asparagus';
                 </code></pre>
             </section>
@@ -376,13 +383,15 @@ myFavoriteThings[0] = 'Asparagus';
                 <h3>Expanding arrays</h3>
                 <p>Arrays do not have a fixed length. You can use "push" to add something to an array.</p>
                 <pre><code>
-var myFavoriteThings = ['Broccoli', 1024, 'Sherlock'];
+var myFavoriteThings = ['Watermelon', 1024, 'Sherlock'];
 myFavoriteThings.push('Dancing');
                 </code></pre>
             </section>
             <section>
-				<h3>Let's Develop It</h3>
+				<h3>Enough Talk: Let's Code!</h3>
                 <p>Create an array of your favorite foods. Echo a few values onto your screen.</p>
+              <img src="images/food.jpg" alt="Food Image">
+
 			</section>
 
             <section>
@@ -396,8 +405,10 @@ for (var i = 0; i &lt; rainbowColors.length; i++) {
                 </code></pre>
             </section>
             <section>
-				<h3>Let's Develop It</h3>
+				<h3>Enough Talk: Let's Code!</h3>
                 <p>Use a loop to make a list of all your favorite foods.</p>
+              <img src="images/food2.jpg" alt="Second Food Image">
+
 			</section>
 
 			<section>
