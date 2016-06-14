@@ -87,8 +87,8 @@ function whatIsAwesome() {
     var awesomeGroup = 'BizStream Academy'; //Local scope
     console.log ('I made a variable called awesomeGroup with a value of ' + awesomeGroup); //Will work
 }
-<!--on the slide, line 84 has a purple { and it's closing bracket } on line 87 is white. do they need to be the same color?-->
 whatIsAwesome();
+
 console.log (awesomeGroup + ' is pretty awesome.'); //Won't work
 				</code></pre>
             </section>
@@ -100,7 +100,7 @@ console.log (awesomeGroup + ' is pretty awesome.'); //Won't work
 var catsAreBest = true;
 var dogsRule = false;
 				</code></pre>
-                <p>If you try to use another variable as a boolean, JavaScript will guess. The number 0, the empty string '  ', undefined, and null are considered false, everything else reads as true.</p>
+                <p>If you try to use another variable as a boolean, JavaScript will give it a boolean value. The number 0, the empty string '  ', undefined, and null are considered false, everything else reads as true.</p>
             </section>
 
             <section>
@@ -188,29 +188,28 @@ if (bananas &gt; 0) {
                 <h3>The if/else statement</h3>
                 <p>Use else to provide an alternate set of instructions.</p>
                 <pre><code>
-var age = 28;
-if (age &gt;= 16) {
-    console.log ('Yay, you can drive!');
+var temperature = 28;
+if (temperature &lt;= 50) {
+    console.log ('You need a coat today.');
 } else {
-    console.log ('Sorry, but you have ' + (16 - age) +
-    ' years until you can drive.');
+    console.log ('It is ' + temperature + 
+    ' degrees, you don't need a coat today.');
 }
-				</code></pre>
+				      </code></pre>
             </section>
             <section>
                 <h3>The if/else if/else statement</h3>
                 <p>If you have multiple conditions, you can use else if.</p>
                 <pre><code>
-var age = 20;
-if (age &gt;= 35) {
-    console.log('You can vote AND hold any place in government!');
-} else if (age &gt;= 25) {
-    console.log('You can vote AND run for the Senate!');
-} else if (age &gt;= 18) {
-    console.log('You can vote!');
+var temperature = 20;
+if (temperature &lt;= 15) {
+    console.log('Maybe you should just stay inside');
+} else if (temperature &lt;= 25) {
+    console.log('You need a coat, hat, and gloves');
+} else if (temperature &lt;= 35) {
+    console.log('You need a coat and a hat');
 } else {
-    console.log('You can\'t vote, but you can
-    still write your representatives.');
+    console.log('You need a coat today.');
 }
 				</code></pre>
             </section>
