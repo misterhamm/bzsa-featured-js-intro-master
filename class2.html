@@ -348,7 +348,7 @@ var arrayName = [element0, element1, ...];
                 <pre><code>
 var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green',
 'Blue', 'Indigo', 'Violet'];
-var lotteryNumbers = [33, 72, 64, 18, 17, 85];
+var celebrityTraits = ['Funny', 'Tall','Hot'];
 var superHeroPowers = ['Telekinesis', 'Agility', 'The Force'];
 				</code></pre>
             </section>
@@ -378,6 +378,10 @@ var lastColor = rainbowColors[6];
 var superHeroPowers = ['Telekinesis', 'Agility', 'The Force'];
 superHeroPowers[0] = 'Reflexes';
                 </code></pre>
+				<pre><code>
+var celebrityTraits = ['Funny', 'Tall',' Hot'];
+var celebrityTraits[1] = 'Short';
+                </code></pre>
             </section>
             <section>
                 <h3>Expanding arrays</h3>
@@ -385,6 +389,10 @@ superHeroPowers[0] = 'Reflexes';
                 <pre><code>
 var superHeroPowers = ['Telekinesis', 'Agility', 'The Force'];
 superHeroPowers.push('Fighting');
+                </code></pre>
+				<pre><code>
+var celebrityTraits = ['Funny', 'Tall',' Hot'];
+var celebrityTraits.push('Strong');
                 </code></pre>
             </section>
             <section>
@@ -409,6 +417,26 @@ for (var i = 0; i &lt; rainbowColors.length; i++) {
                 <p>Use a loop to make a list of all your favorite foods.</p>
               <img src="images/food2.jpg" alt="Second Food Image">
 
+			</section>
+			
+			<section>
+				<h3>jQuery Example</h3>
+				<p>This goes in the head tag section:</p>
+				
+				<pre><code>&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"&gt;&lt;/script&gt;</code></pre>
+				
+				<p>This goes in script tags above your closing body tag:</p>
+				<pre><code>
+$(document).ready(function () {
+	var list= ["Telekinesis", "Agility", "The Force"];
+	
+	jQuery.each(list, function(i, val) {
+		$(".superhero-list").append("&lt;li&gt;" + val + "&lt;/li&gt;");
+	});
+});
+				</code></pre>
+				<p>This goes in your HTML where you want your list to appear</p>
+				<pre><code>&lt;ul class="superhero-list"&gt;&lt;/ul&gt;</code></pre>
 			</section>
 
 			<section>
