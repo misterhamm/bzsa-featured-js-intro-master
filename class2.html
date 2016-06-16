@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 
 	<head>
@@ -188,12 +188,12 @@ if (bananas &gt; 0) {
                 <h3>The if/else statement</h3>
                 <p>Use else to provide an alternate set of instructions.</p>
                 <pre><code>
-var temperature = 28;
-if (temperature &lt;= 50) {
-    console.log ('You need a coat today.');
+var age = 28;
+if (age &gt;= 16) {
+    console.log ('Yay, you can drive!');
 } else {
-    console.log ('It is ' + temperature + 
-    ' degrees, you don't need a coat today.');
+    console.log ('Sorry, but you have ' + (16 - age) + 
+    ' years until you can drive.');
 }
 				      </code></pre>
             </section>
@@ -201,15 +201,16 @@ if (temperature &lt;= 50) {
                 <h3>The if/else if/else statement</h3>
                 <p>If you have multiple conditions, you can use else if.</p>
                 <pre><code>
-var temperature = 20;
-if (temperature &lt;= 15) {
-    console.log('Maybe you should just stay inside');
-} else if (temperature &lt;= 25) {
-    console.log('You need a coat, hat, and gloves');
-} else if (temperature &lt;= 35) {
-    console.log('You need a coat and a hat');
+var age = 20;
+if (age &gt;= 35) {
+    console.log('You can vote AND hold any place in government!');
+} else if (age &gt;= 25) {
+    console.log('You can vote AND run for the Senate!');
+} else if (age &gt;= 18) {
+    console.log('You can vote!');
 } else {
-    console.log('You need a coat today.');
+    console.log('You can\'t vote, but you can 
+    still write your representatives.');
 }
 				</code></pre>
             </section>
