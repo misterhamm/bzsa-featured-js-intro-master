@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Class 2 ~ JavaScript for Beginners ~ Girl Develop It</title>
+
+		<meta name="description" content="This is an introduction to JavaScript curriculum, developed by Sylvia Richardson for the Raleigh/Durham chapter.
+
+        The course is meant to be taught in 4 two-hour sections. Each of the slides and practice files are customizable according to the needs of a given class or audience.">
+		<meta name="author" content="Girl Develop It">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link rel="stylesheet" href="reveal/css/reveal.css">
+		<link rel="stylesheet" href="reveal/css/theme/gdidefault.css" id="theme">
+		<link rel="stylesheet" href="css/custom.css">
+
+		<!-- For syntax highlighting -->
+		<!-- light editor<link rel="stylesheet" href="lib/css/light.css">-->
+		<!-- dark editor--><link rel="stylesheet" href="reveal/lib/css/dark.css">
+
+		<!-- If use the PDF print sheet so students can print slides-->
+
+		<link rel="stylesheet" href="reveal/css/print/pdf.css" type="text/css" media="print">
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+        <!-- Opening slide -->
+            <section>
+              <img src="images/bzs-academy-logo-2015.png" alt="Bizstream Academy logo">
+                <h3>jQuery for Beginners</h3>
+                <h4>Class 2</h4>
+            </section>
+
+
+            <section>
+                <h3>JavaScript Review</h3>
+                <p>In this code, spot the comments, variables, operator, function, argument, and return value.</p>
+                <pre><code>
+function calculateTip(total) {
+    var tipPercent = 0.15; //Can be changed
+    return (total * tipPercent);
+}
+
+var billPreTip = 10;
+var billTip = calculateTip(billPreTip);
+var receipt = 'Meal: ' + billPreTip + ' Tip: ' + billTip +
+    ' Total: ' + (billPreTip + billTip);
+console.log(receipt);
+				</code></pre>
+            </section>
+
+            <section>
+                <h3>Adding the jQuery Library</h3>
+                <p>Before you can start coding jQuery, the library needs to be added to your site. It's important to add this script tag BEFORE your other script tags. </p>
+                <img src="images/jQuery-logo.png" alt="jQuery Image">
+	<p style="white-space:nowrap;margin-left: -25%;">
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"&gt;&lt;/script&gt;	
+	</p>
+            </section>
+            <section>
+                <h3>jQuery Object</h3>
+                <p>$ is a shortcut for jQuery. The $ object is made for selecting an element and then returning that element node to perform an action on it.</p>
+				<p>The following code selects the element that has the ID header in the HTML.</p>
+                  <pre><code>
+$('#header');
+				</code></pre>
+            </section>
+            <section>
+                <h3>Document Ready</h3>
+                <p>In order for jQuery to manipulate HTML, it needs to make sure that the HTML is fully loaded before running the jQuery.</p>
+				<p>So whenever you write jQuery, you'll need to wrap that code in a document.ready function, as shown below:</p>
+                <pre><code>
+$(document).ready(function(event){ 
+  // jQuery code 
+});
+				</code></pre>
+            </section>
+
+            <section>
+                <h3>Selecting Elements</h3>
+                <p>The great thing about jQuery is how easy it is to select HTML elements. The syntax is pretty simple for selecting an HTML element:</p>
+				<p>$('CSS CLASS SELECTOR HERE');</p>
+                <pre><code>
+$('#footer');           // selects element with footer ID
+$('.container');          // selects element with container class
+$('ul li');              // selects all li elements within a ul
+$('h1'); 				// selects all h1 elements
+				</code></pre>
+                <p>Each of these selectors are creating a jQuery object of these elements that contains information about the element. 
+				Using that jQuery object, you can perform an action on it, such as a click event.</p>
+            </section>
+
+            <section>
+                <h3>Manipulating HTML Elements</h3>
+                <p>jQuery allows us to easily manipulate HTML elements by reading, adding, or changing attributes or styles of those elements.</p>
+				<p>Elements can be changed in the HTML, changing their placement, removing them, adding new elements, and so on.</p>
+                <pre><code>
+// Gets the value of the alt attribute
+$('img').attr('alt');
+
+// Sets the value of the alt attribute
+$('img').attr('alt', 'Wild kangaroo');
+				</code></pre>
+				<p>The above code shows you how to get and set the alt attribute of the image HTML tag.</p>
+            </section>
+			
+			<section>
+				<h3>Enough Talk: Let's Code!</h3>
+				<p>Using jQuery, select an image and change the title attribute.</p>
+			</section>
+			
+            <section>
+				<h3>Changing class names</h3>
+                <p>One great way to manipulate how an element appears on the screen is to remove or add a CSS class to it.</p>
+				<pre>
+				<code>
+$('ul li').addClass('list-item');
+$('p').removeClass('highlight');
+$('button').toggleClass('active');	
+				</code>
+				</pre>
+				<p>The first one adds a CSS class .list-item to all li elements in a ul</p>
+				<p>The second one removes the CSS class .highlight from all p tags in the HTML</p>
+				<p>The third one checks if the button has the CSS class .active, then it removes it. If it doesn't have it, it adds that class</p>
+			</section>
+			
+            <section>
+                <h3>Enough Talk: Let's Code!</h3>
+                <p>Using the method addClass, add a CSS class to one of your HTML elements.</p>
+            </section>
+			
+            <section>
+				<h3>Updating CSS Styles with jQuery</h3>
+                <p>The .css() method can handle any CSS changes in jQuery.</p>
+				<pre>
+				<code>
+$('h1').css('font-size', '30px');
+
+$('#header').css({
+	height: '300px', 
+	background: '#333'
+});				
+				</code>
+				</pre>
+				<p>The first line of code above shows you how to update a single CSS property, in this case we're updating the h1 tag and changing the font-size to 30px.</p>
+				<p>The second section shows you how to update multiple CSS properties at once.</p>
+			</section>
+			
+			<section>
+				<h3>Enough Talk: Let's Code!</h3>
+				<p>Using the .css() method, update the CSS of an element.</p>
+			</section>
+
+            <section>
+                <h3>Events</h3>
+                <p>One of the most commonly used events is the click event. 
+				The click event is a method that gets triggered whenever someone clicks on the HTML element that is declared at the beginning of the click event method.</p>
+                <pre><code>
+$('button').click(function(event){
+  $('#header').css('background-color', 'blue');
+});
+				      </code></pre>
+					  <p>In the above jQuery, we are creating an event that will go off whenever clicks on a button HTML element. When they click on it, this method will go after the element with
+					   an ID of header and change it's background color to blue.
+					  </p>
+            </section>
+			
+            <section>
+				<h3>Enough Talk: Let's Code!</h3>
+				<p>Use a click method to update the CSS of an HTML element.</p>
+			</section>
+			
+			<section>
+				<h3>jQuery Plugins</h3>
+				<p>Because jQuery is widely used, a lot of people have created jQuery code(plugins) that you can download and easily add to your own site.</p>
+				<p>jQuery plugins will come with an external file that you will need to download and reference in your site. Then you 'initialize' their jQuery by connecting it to one of your own HTML elements.</p>
+			</section>
+			
+             <section>
+				<h3>Real world example: Slideshow</h3>
+                <p>Now we're going to step through together how to add a slideshow jQuery plugin.</p>
+                <ul>
+					<li>Start by Googling 'Slick Slider' or go to: http://kenwheeler.github.io/slick/</li>
+					<li>Click the 'Get it Now' menu item and then click the 'Download Now' button.</li>
+					<li>Unzip the slick-1.6.0 folder. Then open that folder and go inside the slick folder.</li>
+					<li>Copy the slick.min.js, slick.css, slick-theme.css, and entire fonts folder, and paste them into your project's folder.</li>
+				</ul>
+			</section>
+			
+            <section>
+				<h3>Add the file references to your HTML</h3>
+                <p>In the head tag section of your HTML, add these 2 stylesheets:</p>
+				<pre>
+				<code>
+&lt;link rel="stylesheet" type="text/css" href="slick.css" /&gt;
+&lt;link rel="stylesheet" type="text/css" href="slick-theme.css" /&gt;
+				</code>
+				</pre>
+				<p>AFTER your jQuery script tag, but BEFORE your main.js script tag, add the following:</p>
+				<pre>
+				<code>
+&lt;script src="slick.min.js"&gt;&lt;/script&gt;
+				</code>
+				</pre>
+			</section>
+			
+            <section>
+                <h3>Setup your HTML markup</h3>
+                <p>In your HTML, add the following HTML where you want your slider to appear.</p>
+                <pre><code>
+&lt;div class="slideshow"&gt;
+  &lt;div&gt;your content&lt;/div&gt;
+  &lt;div&gt;your content&lt;/div&gt;
+  &lt;div&gt;your content&lt;/div&gt;
+&lt;/div&gt;
+				</code></pre>
+            </section>
+			
+			<section>
+				<h3>Add in your slider images</h3>
+				<p>Download 3 images from the internet and put them in your project folder.</p>
+				<p>Where it says 'your content' in the HTML, add 3 img tags.</p>
+				<pre><code>
+&lt;div class="slideshow"&gt;
+  &lt;div&gt;&lt;img src="cupcake.png" /&gt;&lt;/div&gt;
+  &lt;div&gt;&lt;img src="frosting.png" /&gt;&lt;/div&gt;
+  &lt;div&gt;&lt;img src="cake.png" /&gt;&lt;/div&gt;
+&lt;/div&gt;
+				</code></pre>
+			</section>
+			
+            <section>
+				<h3>Initialize your jQuery slider</h3>
+                <p>In your main.js file, add the following code: </p>
+              <pre>
+			  <code>
+$('.slideshow').slick({
+	infinite: true,
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	speed: 300,
+	autoplay: true,
+	fade: true,
+	cssEase: 'linear'
+});
+			  </code>
+			  </pre>
+
+			</section>
+
+            <section>
+				<h3>Enough Talk: Let's Code!</h3>
+                <p>Explore the slick slider settings and update your slider.</p>
+			</section>
+
+			<section>
+				<h3>Resources</h3>
+					<ul>
+						<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" target="_blank">JavaScript Guide</a>, from the Mozilla Developers Network.</li>
+						<li><a href="http://www.codecademy.com/tracks/javascript" target="_blank">Codecademy</a>, with interactive JavaScript lessons to help you review.</li>
+					</ul>
+			</section>
+
+			</div><!-- Close .slides -->
+  		<footer>
+        <div class="copyright">
+          JavaScript for Beginners ~ Girl Develop It ~
+          <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
+        </div><!-- Close .copyright -->
+      </footer>
+    </div><!-- Close .reveal -->
+
+
+		<script src="reveal/lib/js/head.min.js"></script>
+		<script src="reveal/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+                touch: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'reveal/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
