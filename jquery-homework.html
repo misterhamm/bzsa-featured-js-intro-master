@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>jQuery Homework | BizStream Academy</title>
+    <link rel="stylesheet" href="classexercises.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        // Powers show/hide buttons.
+        $( document ).ready(function() {
+            $("div.codebox").hide();
+        });
+        function showSolution(num) {
+            $("div#example" + num + "Code").toggle();
+        }
+    </script>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <h1>jQuery Homework</h1>
+        </div>
+        <div id="sidebar">
+            <ul>
+                <li><a href="#class1">Class 1</a></li>
+                <li><a href="#class2">Class 2</a></li>
+                <li><a href="#class3">Class 3</a></li>
+                <li><a href="#class4">Class 4</a></li>
+            </ul>
+        </div>
+        <div id="main">
+            <h2>Homework: Class 4</h2>
+            <p><strong>For this class's homework, you have two options. Pick one of the two plugins below and add it to your site. For extra credit, add both!</strong></p>
+            <h3>Option 1: FancyBox, a Lightbox Plugin</h3>
+            <p><em>Have you ever been to a site where when you open a video, it appears in a pop-up box on top of the rest of the page? This is a plugin that lets you add this feature to your own site! You'll need to find a video on youtube (one featuring the celebrity or superhero from your website!) and then follow the instructions below.</em></p>
+            <h3>Option 2: funnyText, a...Funny Text Plugin!</h3>
+            <p><em>funnyText allows you to create some fun text effects on your site. <a href="http://www.alvarotrigo.com/funnyText/" target="_blank">You really should check it out to get an idea of what it does</a>.</em></p>
+        </div>
+    </div>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-39435329-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
