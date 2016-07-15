@@ -39,26 +39,26 @@
         <!-- Opening slide -->
             <section>
               <img src="img/bzs-academy-logo-2015.png" alt="BZSA Logo" class="noborder">
-                <h3>jQuery for Beginners</h3>
-                <h2>Section 1</h2>
+                <h3>jQuery/Web Development Advanced</h3>
+                <h2>Section 2</h2>
             </section>
 
 
             <section>
-                <h3>JavaScript Review</h3>
-                <p>In this code, spot the comments, variables, operator, function, argument, and return value.</p>
-                <pre><code>
-function calculateTip(total) {
-    var tipPercent = 0.15; //Can be changed
-    return (total * tipPercent);
-}
+                <h3>jQuery Review</h3>
+                <p>What code should you always wrap your jQuery in?</p>
+            </section>
 
-var billPreTip = 10;
-var billTip = calculateTip(billPreTip);
-var receipt = 'Meal: ' + billPreTip + ' Tip: ' + billTip +
-    ' Total: ' + (billPreTip + billTip);
-console.log(receipt);
+			<section>
+                <h3>jQuery Review</h3>
+                <p>What code should you always wrap your jQuery in?</p>
+				<div class="fragment blue">
+                <pre><code>
+$(document).ready(function(event){
+  // jQuery code goes in here
+});
 				</code></pre>
+				</div>
             </section>
 
             <section>
@@ -66,7 +66,7 @@ console.log(receipt);
                 <p>Before you can start coding jQuery, the library needs to be added to your site. It's important to add this script tag BEFORE your other script tags. </p>
                 <img src="images/jQuery-logo.png" alt="jQuery Image">
 	<p style="white-space:nowrap;margin-left: -25%;">
-&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"&gt;&lt;/script&gt;	
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"&gt;&lt;/script&gt;
 	</p>
             </section>
             <section>
@@ -82,8 +82,8 @@ $('#header');
                 <p>In order for jQuery to manipulate HTML, it needs to make sure that the HTML is fully loaded before running the jQuery.</p>
 				<p>So whenever you write jQuery, you'll need to wrap that code in a document.ready function, as shown below:</p>
                 <pre><code>
-$(document).ready(function(event){ 
-  // jQuery code 
+$(document).ready(function(event){
+  // jQuery code
 });
 				</code></pre>
             </section>
@@ -98,7 +98,7 @@ $('.container');          // selects element with container class
 $('ul li');              // selects all li elements within a ul
 $('h1'); 				// selects all h1 elements
 				</code></pre>
-                <p>Each of these selectors are creating a jQuery object of these elements that contains information about the element. 
+                <p>Each of these selectors are creating a jQuery object of these elements that contains information about the element.
 				Using that jQuery object, you can perform an action on it, such as a click event.</p>
             </section>
 
@@ -115,13 +115,13 @@ $('img').attr('alt', 'Wild kangaroo');
 				</code></pre>
 				<p>The above code shows you how to get and set the alt attribute of the image HTML tag.</p>
             </section>
-			
+
 			<section>
 				<h3>Enough Talk: Let's Code!</h3>
 				<p>Using jQuery, select an image and change the title attribute.</p>
 				<img src="images/title-tag.png" />
 			</section>
-			
+
             <section>
 				<h3>Changing class names</h3>
                 <p>One great way to manipulate how an element appears on the screen is to remove or add a CSS class to it.</p>
@@ -129,19 +129,19 @@ $('img').attr('alt', 'Wild kangaroo');
 				<code>
 $('ul li').addClass('list-item');
 $('p').removeClass('highlight');
-$('button').toggleClass('active');	
+$('button').toggleClass('active');
 				</code>
 				</pre>
 				<p>The first one adds a CSS class .list-item to all li elements in a ul</p>
 				<p>The second one removes the CSS class .highlight from all p tags in the HTML</p>
 				<p>The third one checks if the button has the CSS class .active, then it removes it. If it doesn't have it, it adds that class</p>
 			</section>
-			
+
             <section>
                 <h3>Enough Talk: Let's Code!</h3>
                 <p>Using the method addClass, add a CSS class to one of your HTML elements.</p>
             </section>
-			
+
             <section>
 				<h3>Updating CSS Styles with jQuery</h3>
                 <p>The .css() method can handle any CSS changes in jQuery.</p>
@@ -150,15 +150,15 @@ $('button').toggleClass('active');
 $('h1').css('font-size', '30px');
 
 $('#header').css({
-	height: '300px', 
+	height: '300px',
 	background: '#333'
-});				
+});
 				</code>
 				</pre>
 				<p>The first line of code above shows you how to update a single CSS property, in this case we're updating the h1 tag and changing the font-size to 30px.</p>
 				<p>The second section shows you how to update multiple CSS properties at once.</p>
 			</section>
-			
+
 			<section>
 				<h3>Enough Talk: Let's Code!</h3>
 				<p>Using the .css() method, update the CSS of an element.</p>
@@ -166,7 +166,7 @@ $('#header').css({
 
             <section>
                 <h3>Events</h3>
-                <p>One of the most commonly used events is the click event. 
+                <p>One of the most commonly used events is the click event.
 				The click event is a method that gets triggered whenever someone clicks on the HTML element that is declared at the beginning of the click event method.</p>
                 <pre><code>
 $('button').click(function(event){
@@ -177,20 +177,20 @@ $('button').click(function(event){
 					   an ID of header and change it's background color to blue.
 					  </p>
             </section>
-			
+
             <section>
 				<h3>Enough Talk: Let's Code!</h3>
 				<p>Use a click method to update the CSS of an HTML element.</p>
 				<img src="images/click-mouse.jpg" />
 			</section>
-			
+
 			<section>
 				<h3>jQuery Plugins</h3>
 				<p>Because jQuery is widely used, a lot of people have created jQuery code(plugins) that you can download and easily add to your own site.</p>
 				<p>jQuery plugins will come with an external file that you will need to download and reference in your site. Then you 'initialize' their jQuery by connecting it to one of your own HTML elements.</p>
 				<img src="images/slider.png" />
 			</section>
-			
+
              <section>
 				<h3>Real world example: Slideshow</h3>
                 <p>Now we're going to step through together how to add a slideshow jQuery plugin.</p>
@@ -201,7 +201,7 @@ $('button').click(function(event){
 					<li>Copy the slick.min.js, slick.css, slick-theme.css, and entire fonts folder, and paste them into your project's folder.</li>
 				</ul>
 			</section>
-			
+
             <section>
 				<h3>Add the file references to your HTML</h3>
                 <p>In the head tag section of your HTML, add these 2 stylesheets:</p>
@@ -218,7 +218,7 @@ $('button').click(function(event){
 				</code>
 				</pre>
 			</section>
-			
+
             <section>
                 <h3>Setup your HTML markup</h3>
                 <p>In your HTML, add the following HTML where you want your slider to appear.</p>
@@ -230,7 +230,7 @@ $('button').click(function(event){
 &lt;/div&gt;
 				</code></pre>
             </section>
-			
+
 			<section>
 				<h3>Add in your slider images</h3>
 				<p>Download 3 images from the internet and put them in your project folder.</p>
@@ -243,7 +243,7 @@ $('button').click(function(event){
 &lt;/div&gt;
 				</code></pre>
 			</section>
-			
+
             <section>
 				<h3>Initialize your jQuery slider</h3>
                 <p>In your main.js file, add the following code: </p>
